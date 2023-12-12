@@ -48,7 +48,7 @@ const AboutSection = (props) => {
       <h1 className="text-6xl text-gray-100 font-extrabold leading-snug">
         Hi, I'm
         <br />
-        <span className="bg-gray-800 px-8 italic">Gustavo correia</span>
+        <span className="bg-gray-800 px-8 italic shadow-2xl">Gustavo correia</span>
       </h1>
       <motion.p
         className="text-lg text-gray-100 mt-4"
@@ -72,7 +72,7 @@ const AboutSection = (props) => {
       <motion.button
         onClick={() => setSection(3)}
         className={`bg-indigo-600 text-white py-4 px-8 
-      rounded-lg font-bold text-lg mt-16`}
+      rounded-lg font-bold text-lg mt-16 shadow hover:shadow-2xl hover:bg-indigo-800`}
         initial={{
           opacity: 0,
           y: 25,
@@ -125,12 +125,16 @@ const skills = [
 const languages = [
   {
     title: "🇺🇸 English",
+    level: 60
+  },
+  {
+    title: "🇪🇸 Spanish",
     level: 60,
   },
   {
-    title: "spanish",
-    level: 60,
-  },
+    title: "🇧🇷 Portuguese-BR",
+    level: 90,
+  }
 ];
 
 const SkillsSection = () => {
@@ -138,7 +142,7 @@ const SkillsSection = () => {
     <Section>
       <motion.div whileInView={"visible"}>
         <h2 className="text-5xl font-bold text-blue-500">Skills</h2>
-        <div className=" mt-8 space-y-4 bg-white p-4 opacity-80">
+        <div className=" mt-8 space-y-4 bg-white p-4 opacity-80 shadow-2xl">
           {skills.map((skill, index) => (
             <div className="w-64" key={index}>
               <motion.h3
@@ -182,7 +186,7 @@ const SkillsSection = () => {
         </div>
         <div>
           <h2 className="text-5xl font-bold mt-10 text-blue-500">Languages</h2>
-          <div className=" mt-8 space-y-4 bg-white p-4 opacity-80">
+          <div className=" mt-8 space-y-4 bg-white p-4 opacity-80 shadow-2xl">
             {languages.map((lng, index) => (
               <div className="w-64" key={index}>
                 <motion.h3
@@ -245,14 +249,14 @@ const ProjectsSection = () => {
     <Section>
       <div className="flex w-full h-full gap-8 items-center justify-center">
         <button
-          className="hover:text-indigo-600 transition-colors text-blue-500"
+          className="hover:text-indigo-600 transition-colors text-blue-500 z-index-10"
           onClick={previousProject}
         >
           ← Previous
         </button>
         <h2 className="text-5xl font-bold text-gray-500">Projects</h2>
         <button
-          className="hover:text-indigo-600 transition-colors text-blue-500"
+          className="hover:text-indigo-600 transition-colors text-blue-500 z-index-10"
           onClick={nextProject}
         >
           Next →
@@ -266,7 +270,7 @@ const ContactSection = () => {
   return (
     <Section>
       <h2 className="text-5xl font-bold text-blue-500">Contact me</h2>
-      <div className="mt-8 p-8 rounded-md bg-gray-700 w-96 max-w-full opacity-50">
+      <div className="mt-8 p-8 rounded-md bg-gray-700 w-96 max-w-full opacity-50 shadow-2xl">
         <form>
           <label htmlFor="name" className="font-medium text-white block mb-1">
             Name
@@ -300,7 +304,7 @@ const ContactSection = () => {
             id="message"
             className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
           />
-          <button className="bg-green-800 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 ">
+          <button className="bg-green-800 hover:bg-blue-600 shadow hover:shadow-2xl text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 ">
             Submit
           </button>
         </form>

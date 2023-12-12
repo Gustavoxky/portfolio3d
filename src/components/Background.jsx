@@ -19,8 +19,8 @@ export const Background = () => {
 
   useEffect(() => {
     tl.current.to(color.current, { r: 77 / 255, g: 76 / 255, b: 125 / 255 }); // Color: "#4D4C7D"
-    tl.current.to(color.current, { r: 1, g: 0.85882352941, b: 0.76470588235 }); // Color: "#958478"
-    tl.current.to(color.current, { r: 0.96078431372, g: 0.96078431372, b: 0.96078431372 }); // Color: "#9d9d9d"
+    tl.current.to(color.current, { r: 1, g: 0.85882352941, b: 0.76470588235 }); // Color: "#332b25"
+    tl.current.to(color.current, { r: 0.96078431372, g: 0.96078431372, b: 0.96078431372 }); // Color: "#2f2d2d"
   }, []);
 
   return (

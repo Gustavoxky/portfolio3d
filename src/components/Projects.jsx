@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     title: "Social media app",
-    url: "https://www.youtube.com/watch?v=pGMKIyALcK0",
+    url: "https://github.com/Gustavoxky/SocialMediaApp",
     image: "projects/tinder.png",
     description: "Clone do tinder desenvolvido em swift e swiftUI",
   },
@@ -64,7 +64,7 @@ const Project = (props) => {
         position-y={0.5}
       />
       <Text
-        maxWidth={2}
+        maxWidth={3}
         anchorX={"left"}
         anchorY={"top"}
         fontSize={0.2}
@@ -73,11 +73,11 @@ const Project = (props) => {
         {project.title.toUpperCase()}
       </Text>
       <Text
-        maxWidth={2.5}
+        maxWidth={3.5}
         anchorX="left"
         anchorY="top"
         fontSize={0.18}
-        position={[-1, -1, 0]}
+        position={[-1.5, -1, 0]}
       >
         {project.description}
       </Text>
