@@ -110,7 +110,7 @@ const skills = [
     level: 60,
   },
   {
-    title: "3D Modeling",
+    title: "SQL/Docker",
     level: 40,
   },
   {
@@ -118,9 +118,9 @@ const skills = [
     level: 40,
   },
   {
-    title: "java",
+    title: "Java/Kotlin",
     level: 40,
-  }
+  },
 ];
 const languages = [
   {
