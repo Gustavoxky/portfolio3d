@@ -2,7 +2,7 @@ import { useGLTF } from "@react-three/drei";
 import React from "react";
 
 export function Skyscraper(props) {
-  const { nodes, materials } = useGLTF("../../public/models/Skyscraper.glb");
+  const { nodes, materials } = useGLTF("models/Skyscraper.glb");
 
   // Ajuste a escala do prédio
   const scale = 2.5;
