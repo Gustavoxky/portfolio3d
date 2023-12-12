@@ -13,6 +13,7 @@ import { Avatar } from "./Avatar";
 import { Background } from "./Background";
 import { Office } from "./Office";
 import { Projects } from "./Projects";
+import { City, Skyscraper } from "./Skyscraper";
 
 export const Experience = (props) => {
   const { menuOpened } = props;
@@ -139,43 +140,8 @@ export const Experience = (props) => {
           y: section === 1 ? -viewport.height : -1.5,
         }}
       >
+        <City/>
         <directionalLight position={[-5, 3, 5]} intensity={0.4} />
-        <Float>
-          {/* <mesh position={[1, -3, -15]} scale={[2, 2, 2]}>
-            <sphereGeometry />
-            <MeshDistortMaterial
-              opacity={0.8}
-              transparent
-              distort={0.4}
-              speed={4}
-              color={"red"}
-            />
-          </mesh> */}
-        </Float>
-        <Float>
-          {/* <mesh scale={[3, 3, 3]} position={[3, 1, -18]}>
-            <sphereGeometry />
-            <MeshDistortMaterial
-              opacity={0.8}
-              transparent
-              distort={1}
-              speed={5}
-              color="yellow"
-            />
-          </mesh> */}
-        </Float>
-        <Float>
-          {/* <mesh scale={[1.4, 1.4, 1.4]} position={[-3, -1, -11]}>
-            <boxGeometry />
-            <MeshWobbleMaterial
-              opacity={0.8}
-              transparent
-              factor={1}
-              speed={5}
-              color={"blue"}
-            />
-          </mesh> */}
-        </Float>
       </motion.group>
       <Projects />
     </>

@@ -51,6 +51,7 @@ export function Office(props) {
         geometry={nodes.Screen.geometry}
         position={[0.45, 0.94, -1.72]}
         rotation={[Math.PI, -1.1, Math.PI]}
+        scale={1.15}
       >
         <meshBasicMaterial map={textureVSCode} toneMapped={false} />
       </mesh>
@@ -201,7 +202,7 @@ export function Office(props) {
       <motion.group
         scale={[0, 0, 0]}
         animate={{
-          scale: section === 0 ? 1 : 0,
+          scale: section === 0 ? 1.15 : 0,
         }}
         name="iMac"
         position={[0.45, 0.94, -1.72]}
