@@ -138,7 +138,7 @@ const SkillsSection = () => {
     <Section>
       <motion.div whileInView={"visible"}>
         <h2 className="text-5xl font-bold text-blue-500">Skills</h2>
-        <div className=" mt-8 space-y-4">
+        <div className=" mt-8 space-y-4 bg-white p-4 opacity-80">
           {skills.map((skill, index) => (
             <div className="w-64" key={index}>
               <motion.h3
@@ -181,12 +181,12 @@ const SkillsSection = () => {
           ))}
         </div>
         <div>
-          <h2 className="text-5xl font-bold mt-10 text-white">Languages</h2>
-          <div className=" mt-8 space-y-4">
+          <h2 className="text-5xl font-bold mt-10 text-blue-500">Languages</h2>
+          <div className=" mt-8 space-y-4 bg-white p-4 opacity-80">
             {languages.map((lng, index) => (
               <div className="w-64" key={index}>
                 <motion.h3
-                  className="text-xl font-bold text-gray-100"
+                  className="text-xl font-bold text-gray-700"
                   initial={{
                     opacity: 0,
                   }}
@@ -265,10 +265,10 @@ const ProjectsSection = () => {
 const ContactSection = () => {
   return (
     <Section>
-      <h2 className="text-5xl font-bold">Contact me</h2>
-      <div className="mt-8 p-8 rounded-md bg-gray-500 w-96 max-w-full">
+      <h2 className="text-5xl font-bold text-blue-500">Contact me</h2>
+      <div className="mt-8 p-8 rounded-md bg-gray-700 w-96 max-w-full opacity-50">
         <form>
-          <label htmlFor="name" className="font-medium text-gray-900 block mb-1">
+          <label htmlFor="name" className="font-medium text-white block mb-1">
             Name
           </label>
           <input
@@ -279,7 +279,7 @@ const ContactSection = () => {
           />
           <label
             htmlFor="email"
-            className="font-medium text-gray-900 block mb-1 mt-8"
+            className="font-medium text-white block mb-1 mt-8"
           >
             Email
           </label>
@@ -291,7 +291,7 @@ const ContactSection = () => {
           />
           <label
             htmlFor="email"
-            className="font-medium text-gray-900 block mb-1 mt-8"
+            className="font-medium text-white block mb-1 mt-8"
           >
             Message
           </label>
@@ -300,7 +300,7 @@ const ContactSection = () => {
             id="message"
             className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
           />
-          <button className="bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 ">
+          <button className="bg-green-800 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 ">
             Submit
           </button>
         </form>

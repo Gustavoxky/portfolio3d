@@ -11,19 +11,19 @@ export const projects = [
     title: "API project",
     url: "https://github.com/Gustavoxky/ApiProject",
     image: "projects/APIs.png",
-    description: "Recreating the Atmos Awwwards website with React Three Fiber",
+    description: "Uma API com 7 endpoints desenvolvida com typescrit, node.js SQLite e jest",
   },
   {
     title: "Cloud project",
     url: "https://github.com/Gustavoxky/CloudProject",
     image: "projects/cloud.jpeg",
-    description: "Learn how to bake a 3D model with Blender and use it in r3f",
+    description: "Um simulador de cloud computing desenvolvido em java com cloudSimPlus ",
   },
   {
     title: "Social media app",
     url: "https://www.youtube.com/watch?v=pGMKIyALcK0",
     image: "projects/tinder.png",
-    description: "Learn how to use ReadyPlayerMe to create a 3D avatar",
+    description: "Clone do tinder desenvolvido em swift e swiftUI",
   },
   {
     title: "Blockchain",
@@ -40,7 +40,7 @@ const Project = (props) => {
   const bgOpacity = useMotionValue(0.4);
 
   useEffect(() => {
-    animate(bgOpacity, highlighted ? 0.7 : 0.4);
+    animate(bgOpacity, highlighted ? 0.5 : 0.2);
   }, [highlighted]);
 
   useFrame(() => {
@@ -54,30 +54,30 @@ const Project = (props) => {
         onClick={() => window.open(project.url, "_blank")}
         ref={background}
       >
-        <planeGeometry args={[4, 3]} />
+        <planeGeometry args={[5, 3.5]} />
         <meshBasicMaterial color="black" transparent opacity={0.4} />
       </mesh>
       <Image
-        scale={[4, 2.2, 2]}
+        scale={[4.8, 2.2, 2]}
         url={project.image}
         toneMapped={false}
-        position-y={0.3}
+        position-y={0.5}
       />
       <Text
         maxWidth={2}
         anchorX={"left"}
         anchorY={"top"}
         fontSize={0.2}
-        position={[-1, -1, 0]}
+        position={[-1, -0.7, 0]}
       >
         {project.title.toUpperCase()}
       </Text>
       <Text
-        maxWidth={2}
+        maxWidth={2.5}
         anchorX="left"
         anchorY="top"
-        fontSize={0.1}
-        position={[-1, -1.2, 0]}
+        fontSize={0.18}
+        position={[-1, -1, 0]}
       >
         {project.description}
       </Text>

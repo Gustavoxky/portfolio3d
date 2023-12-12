@@ -140,7 +140,7 @@ export const Experience = (props) => {
           y: section === 1 ? -viewport.height : -1.5,
         }}
       >
-        <City/>
+        <City />
         <directionalLight position={[-5, 3, 5]} intensity={0.4} />
       </motion.group>
       <Projects />
