@@ -249,14 +249,14 @@ const ProjectsSection = () => {
     <Section>
       <div className="flex w-full h-full gap-8 items-center justify-center">
         <button
-          className="hover:text-indigo-600 transition-colors text-blue-500 z-index-10"
+          className="hover:text-indigo-600 transition-colors text-blue-500 z-index-10 mt-96"
           onClick={previousProject}
         >
           ← Previous
         </button>
-        <h2 className="text-5xl font-bold text-gray-500">Projects</h2>
+        <h2 className="text-5xl font-bold text-gray-500 mt-96">Projects</h2>
         <button
-          className="hover:text-indigo-600 transition-colors text-blue-500 z-index-10"
+          className="hover:text-indigo-600 transition-colors text-blue-500 z-index-10 mt-96"
           onClick={nextProject}
         >
           Next →

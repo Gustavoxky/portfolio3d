@@ -29,7 +29,7 @@ export const projects = [
     title: "Blockchain",
     url: "https://github.com/Gustavoxky/blockchain_go",
     image: "projects/blockchain.jpeg",
-    description: "Use React Three Fiber to create a 3D game",
+    description: "Blockchain desenvolvida em Go",
   },
 ];
 
@@ -51,6 +51,7 @@ const Project = (props) => {
     <group {...props}>
       <mesh
         position-z={-0.001}
+        position-y={-2.5}
         onClick={() => window.open(project.url, "_blank")}
         ref={background}
       >
@@ -61,14 +62,14 @@ const Project = (props) => {
         scale={[4.8, 2.2, 2]}
         url={project.image}
         toneMapped={false}
-        position-y={0.5}
+        position-y={-2}
       />
       <Text
         maxWidth={3}
         anchorX={"left"}
         anchorY={"top"}
         fontSize={0.2}
-        position={[-1, -0.7, 0]}
+        position={[-1, -3.2, 0]}
       >
         {project.title.toUpperCase()}
       </Text>
@@ -77,7 +78,7 @@ const Project = (props) => {
         anchorX="left"
         anchorY="top"
         fontSize={0.18}
-        position={[-1.5, -1, 0]}
+        position={[-1.5, -3.5, 0]}
       >
         {project.description}
       </Text>
@@ -99,8 +100,8 @@ export const Projects = () => {
           position={[index * 5, 0, -3]}
           animate={{
             x: 0 + (index - currentProject) * 5,
-            y: currentProject === index ? 0 : -0.1,
-            z: currentProject === index ? -2 : -3,
+            y: currentProject === index ? 0 : -1,
+            z: currentProject === index ? -2 : -5,
             rotateX: currentProject === index ? 0 : -Math.PI / 3,
             rotateZ: currentProject === index ? 0 : -0.1 * Math.PI,
           }}
