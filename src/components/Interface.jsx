@@ -34,10 +34,15 @@ export const Interface = (props) => {
   return (
     <div className="flex flex-col items-center w-screen">
       <AboutSection setSection={setSection} />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
+      <div className="mt-24">
+        <SkillsSection />
+      </div>
+      <div className="mt-24">
+        <ProjectsSection />
+      </div>
+        <ContactSection />
     </div>
+
   );
 };
 
@@ -269,46 +274,28 @@ const ProjectsSection = () => {
 const ContactSection = () => {
   return (
     <Section>
-      <h2 className="text-5xl font-bold text-blue-500">Contact me</h2>
-      <div className="mt-8 p-8 rounded-md bg-gray-700 w-96 max-w-full opacity-50 shadow-2xl">
-        <form>
-          <label htmlFor="name" className="font-medium text-white block mb-1">
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-          />
-          <label
-            htmlFor="email"
-            className="font-medium text-white block mb-1 mt-8"
-          >
+      <div className="mt-8 p-8 rounded-md bg-gray-700 w-full max-w-full opacity-50 shadow-2xl fixed bottom-40 left-0">
+        <div className="flex flex-col space-y-4">
+          <a href="mailto:seuemail@example.com" className="text-white hover:text-blue-500" target="_blank" rel="noopener noreferrer">
             Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-          />
-          <label
-            htmlFor="email"
-            className="font-medium text-white block mb-1 mt-8"
-          >
-            Message
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-          />
-          <button className="bg-green-800 hover:bg-blue-600 shadow hover:shadow-2xl text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 ">
-            Submit
-          </button>
-        </form>
-      </div>
+          </a>
+          <a href="https://wa.me/+5511999582931" className="text-white hover:text-green-500" target="_blank" rel="noopener noreferrer">
+            WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/in/gustavo-correia-dos-santos-6039641a6/" className="text-white hover:text-blue-500" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a href="https://github.com/Gustavoxky" className="text-white hover:text-gray-500" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+        <footer className="bg-gray-100 text-gray-700 bg-opacity-50 p-4">
+          <div className="container mx-auto">
+            <div className="text-2xl font-bold flex items-center">Gustavo Correia &copy;</div>
+          </div>
+        </footer>
+      </div>     
     </Section>
+
   );
 };
