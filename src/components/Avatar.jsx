@@ -120,6 +120,15 @@ export function Avatar(props) {
         />
         <skinnedMesh
           frustumCulled={false}
+          name="Wolf3D_Beard"
+          geometry={nodes.Wolf3D_Beard.geometry}
+          material={materials.Wolf3D_Beard}
+          skeleton={nodes.Wolf3D_Beard.skeleton}
+          morphTargetDictionary={nodes.Wolf3D_Beard.morphTargetDictionary}
+          morphTargetInfluences={nodes.Wolf3D_Beard.morphTargetInfluences}
+        />
+        <skinnedMesh
+          frustumCulled={false}
           name="Wolf3D_Teeth"
           geometry={nodes.Wolf3D_Teeth.geometry}
           material={materials.Wolf3D_Teeth}
