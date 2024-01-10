@@ -50,12 +50,15 @@ const Project = (props) => {
   return (
     <group {...props}>
       <mesh
-        position-z={-0.001}
-        position-y={-2.5}
+        position={[0, -2.5, -0.001]}
+        rotation-x={-0.2}
         onClick={() => window.open(project.url, "_blank")}
         ref={background}
       >
-        <planeGeometry args={[5, 3.5]} />
+      <planeBufferGeometry
+        args={[5.5, 3.8, 32, 32]} // Adicionamos mais segmentos para suavizar as bordas
+        attach="geometry"
+      />        
         <meshBasicMaterial color="black" transparent opacity={0.4} />
       </mesh>
       <Image
@@ -63,13 +66,15 @@ const Project = (props) => {
         url={project.image}
         toneMapped={false}
         position-y={-2}
+        rotation-x={-0.2}
+        position-z={0.5}
       />
       <Text
         maxWidth={3}
         anchorX={"left"}
         anchorY={"top"}
         fontSize={0.2}
-        position={[-1, -3.2, 0]}
+        position={[-1, -3.1, 1]}
       >
         {project.title.toUpperCase()}
       </Text>
@@ -78,7 +83,7 @@ const Project = (props) => {
         anchorX="left"
         anchorY="top"
         fontSize={0.18}
-        position={[-1.5, -3.5, 0]}
+        position={[-1.5, -3.5, 1]}
       >
         {project.description}
       </Text>

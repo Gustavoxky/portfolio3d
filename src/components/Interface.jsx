@@ -53,7 +53,7 @@ const AboutSection = (props) => {
       <h1 className="text-6xl text-gray-100 font-extrabold leading-snug">
         Hi, I'm
         <br />
-        <span className="bg-gray-800 px-8 italic shadow-2xl">Gustavo correia</span>
+        <span className="bg-gray-800 px-8 italic shadow-2xl rounded-lg ">Gustavo correia</span>
       </h1>
       <motion.p
         className="text-lg text-gray-100 mt-4"
@@ -147,7 +147,7 @@ const SkillsSection = () => {
     <Section>
       <motion.div whileInView={"visible"}>
         <h2 className="text-5xl font-bold text-blue-500">Skills</h2>
-        <div className=" mt-8 space-y-4 bg-white p-4 opacity-80 shadow-2xl">
+        <div className=" mt-8 space-y-4 bg-white p-4 opacity-80 shadow-2xl rounded-lg ">
           {skills.map((skill, index) => (
             <div className="w-64" key={index}>
               <motion.h3
@@ -191,7 +191,7 @@ const SkillsSection = () => {
         </div>
         <div>
           <h2 className="text-5xl font-bold mt-10 text-blue-500">Languages</h2>
-          <div className=" mt-8 space-y-4 bg-white p-4 opacity-80 shadow-2xl">
+          <div className=" mt-8 space-y-4 bg-white p-4 opacity-80 shadow-2xl rounded-lg">
             {languages.map((lng, index) => (
               <div className="w-64" key={index}>
                 <motion.h3
